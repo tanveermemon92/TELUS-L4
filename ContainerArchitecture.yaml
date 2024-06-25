@@ -1,0 +1,21 @@
+graph LR
+    A[Build Docker Image] --> B[Create Dockerfile]
+    B --> C[Build Docker Image with Model]
+    C --> D[Run Docker Container]
+    D --> E[Serve Predictions via Flask API]
+    graph TD
+    subgraph Client
+        A[User Request]
+    end
+    subgraph Kubernetes Cluster
+        B[Load Balancer] --> C[Service]
+        C --> D1[Pod 1]
+        C --> D2[Pod 2]
+        C --> D3[Pod 3]
+        subgraph Pods
+            D1[Pod 1] --> E1[Flask App 1]
+            D2[Pod 2] --> E2[Flask App 2]
+            D3[Pod 3] --> E3[Flask App 3]
+        end
+    end
+    A --> B
