@@ -1,0 +1,20 @@
+# Apply the deployment configuration
+kubectl apply -f deployment.yaml
+
+# Apply the service configuration
+kubectl apply -f service.yaml
+
+# Get the external IP of the service
+kubectl get services
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-model-service
+spec:
+  selector:
+    app: ml-model
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
