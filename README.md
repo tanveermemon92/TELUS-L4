@@ -39,6 +39,16 @@ The following packages and dependencies are required to run the code in this rep
     - Build the Docker image: docker build -t ml-model
     - Run the Docker container: docker run -p 4000:80 ml-model
 
+# Usage
+Send a prediction request to the deployed model: curl -X POST http://<external-ip>/predict -H "Content-Type: application/json" -d '{"features": [0.5, 1, 0.8, 0.3]}'
+
+# Contribution
+Contributions are welcome! Please feel free to submit pull requests or open issues for any improvements or bug fixes.
+Make sure to replace `your-username` and `your-repository` with your actual GitHub username and repository name. Additionally, include a `LICENSE` file in your repository with the appropriate license text.
+
+# License
+This project is licensed under the MIT License.
+
 ## Data Preparation
 Load and preprocess the data using the following code snippet:
 ```python
