@@ -4,18 +4,14 @@ This repository contains code for developing a predictive model to identify at-r
 
 # Requirements
 The following packages and dependencies are required to run the code in this repository:
-1. Python 3.8+
-2. pandas
-3. numpy
-4. scikit-learn
-5. matplotlib
-6. seaborn
-7. Flask
-8. Docker
-9. Kubernetes
-10. Google Cloud Platform (GCP) BigQuery
-11. Apache Airflow
-12. PySpark
+1. Python 3.8+ (Lib: pandas, numpy,  matplotlib, seaborn) (Framework: Flask)
+2. scikit-learn
+3. 12. PySpark
+4. Docker
+5. Kubernetes
+6. GCP BigQuery
+7. Apache Airflow
+
 
 # Installation
 1. Clone the repository: git clone https://github.com/tanveermemon92/TELUS-L4
