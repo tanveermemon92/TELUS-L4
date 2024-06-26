@@ -1,6 +1,15 @@
 # Customer Price Awareness Prediction
 # Overview
 This repository contains code for developing a predictive model to identify at-risk customers who are unaware of price changes. The code includes steps for data exploration, model training, and deployment using Docker and Kubernetes.
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Data Preparation](#data-preparation)
+4. [Model Training](#model-training)
+5. [Containerization](#containerization)
+6. [Deployment](#deployment)
+7. [Usage](#usage)
+8. [Charts](#charts)
 
 # Requirements
 The following packages and dependencies are required to run the code in this repository:
@@ -13,10 +22,24 @@ The following packages and dependencies are required to run the code in this rep
 7. Apache Airflow
 
 # Installation
-1. Clone the repository: git clone https://github.com/tanveermemon92/TELUS-L4
-2. Create a virtual environment and activate it: python -m venv venv source venv/bin/activate
-3. Install the required Python packages: pip install pandas numpy scikit-learn matplotlib seaborn Flask google-cloud-bigquery apache-airflow great-expectations pyspark
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/customer-awareness-prediction.git
+    cd customer-awareness-prediction
+    ```
+2. Create a virtual environment and activate it:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+3. Install the required Python packages:
+    ```bash
+    pip install pandas numpy scikit-learn matplotlib seaborn Flask google-cloud-bigquery apache-airflow great-expectations pyspark
+    ```
 4. Install Docker and Kubernetes:
+    - Follow the instructions to install Docker: [Docker Installation](https://docs.docker.com/get-docker/)
+    - Follow the instructions to install Kubernetes: [Kubernetes Installation](https://kubernetes.io/docs/setup/)
+
 # Build the Docker image
 docker build -t ml-model
 # Run the Docker container
