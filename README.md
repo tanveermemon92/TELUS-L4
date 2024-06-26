@@ -1,5 +1,4 @@
 # Customer Price Awareness Prediction
-# Overview
 This repository contains code for developing a predictive model to identify at-risk customers who are unaware of price changes. The code includes steps for data exploration, model training, and deployment using Docker and Kubernetes.
 ## Table of Contents
 1. [Requirements](#requirements)
@@ -39,11 +38,32 @@ The following packages and dependencies are required to run the code in this rep
 4. Install Docker and Kubernetes:
     - Follow the instructions to install Docker: [Docker Installation](https://docs.docker.com/get-docker/)
     - Follow the instructions to install Kubernetes: [Kubernetes Installation](https://kubernetes.io/docs/setup/)
+    - Build the Docker image: docker build -t ml-model
+    - Run the Docker container: docker run -p 4000:80 ml-model
+  
+## Data Preparation
 
-# Build the Docker image
-docker build -t ml-model
-# Run the Docker container
-docker run -p 4000:80 ml-model
+Load and preprocess the data using the following code snippet:
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Load dataset
+data = pd.read_csv('customer_data.csv')
+
+# Preprocess data
+features = ['customer_tenure', 'num_services', 'interaction_pattern', 'sms_engagement']
+X = data[features]
+y = data['unaware_of_price_change']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
 # Usage
 Send a prediction request to the deployed model: curl -X POST http://<external-ip>/predict -H "Content-Type: application/json" -d '{"features": [0.5, 1, 0.8, 0.3]}'
