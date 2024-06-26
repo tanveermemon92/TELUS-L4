@@ -4,24 +4,22 @@ This repository contains code for developing a predictive model to identify at-r
 
 # Requirements
 The following packages and dependencies are required to run the code in this repository:
-Python 3.8+
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-Flask
-Docker
-Kubernetes
-Google Cloud Platform (GCP) BigQuery
-Apache Airflow
-Great Expectations
-PySpark
+1. Python 3.8+
+2. pandas
+3. numpy
+4. scikit-learn
+5. matplotlib
+6. seaborn
+7. Flask
+8. Docker
+9. Kubernetes
+10. Google Cloud Platform (GCP) BigQuery
+11. Apache Airflow
+12. PySpark
 
 # Installation
 1. Clone the repository: git clone https://github.com/tanveermemon92/TELUS-L4
-2. Create a virtual environment and activate it: python -m venv venv
-source venv/bin/activate
+2. Create a virtual environment and activate it: python -m venv venv source venv/bin/activate
 3. Install the required Python packages: pip install pandas numpy scikit-learn matplotlib seaborn Flask google-cloud-bigquery apache-airflow great-expectations pyspark
 4. Install Docker and Kubernetes:
 # Build the Docker image
