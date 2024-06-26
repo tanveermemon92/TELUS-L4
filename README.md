@@ -4,11 +4,9 @@ This repository contains code for developing a predictive model to identify at-r
 1. [Requirements](#requirements)
 2. [Installation](#installation)
 3. [Data Preparation](#data-preparation)
-4. [Model Training](#model-training)
-5. [Containerization](#containerization)
-6. [Deployment](#deployment)
-7. [Usage](#usage)
-8. [Charts](#charts)
+4. [Usage](#usage)
+5. [Contribution](#contribution)
+6. [License](#license)
 
 # Requirements
 The following packages and dependencies are required to run the code in this repository:
