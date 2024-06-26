@@ -41,8 +41,7 @@ The following packages and dependencies are required to run the code in this rep
     - Build the Docker image: docker build -t ml-model
     - Run the Docker container: docker run -p 4000:80 ml-model
 
-# Data Preparation
-
+## Data Preparation
 Load and preprocess the data using the following code snippet:
 ```python
 import pandas as pd
